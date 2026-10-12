@@ -1,0 +1,231 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chapter 1 — 失去家園的烏鴉</title>
+    <!-- 引入 Noto Serif TC 思源宋體 -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Serif+TC:wght@400;600;900&display=swap" rel="stylesheet">
+
+    <style>
+        * {
+            box-sizing: border-box;
+        }
+
+        body {
+            margin: 0;
+            min-height: 100vh;
+            background: #000000;
+            color: #b01515;
+            font-family: "Noto Serif TC", "Times New Roman", serif;
+            overflow-x: hidden;
+        }
+
+        /* 背景牢籠 */
+        .cages {
+            position: fixed;
+            inset: 0;
+            display: grid;
+            grid-template-columns: repeat(5, 1fr);
+            gap: 35px;
+            padding: 30px;
+            opacity: 0.13;
+            pointer-events: none;
+            overflow: hidden;
+            z-index: 0;
+        }
+
+        .cage {
+            position: relative;
+            height: 120vh;
+            border-left: 2px solid #a51d1d;
+            border-right: 2px solid #a51d1d;
+            transform: rotate(8deg);
+        }
+
+        .cage::before {
+            content: "";
+            position: absolute;
+            inset: 0;
+            background: repeating-linear-gradient(
+                90deg,
+                transparent 0px,
+                transparent 24px,
+                #a51d1d 25px,
+                transparent 27px
+            );
+        }
+
+        .cage::after {
+            content: "";
+            position: absolute;
+            top: 0;
+            left: -10px;
+            width: calc(100% + 20px);
+            height: 18px;
+            border-top: 2px solid #a51d1d;
+            border-bottom: 2px solid #a51d1d;
+        }
+
+        /* 文章主體 */
+        .container {
+            position: relative;
+            z-index: 1;
+            width: min(760px, 88%);
+            margin: 0 auto;
+            padding: 100px 0 120px;
+        }
+
+        .chapter {
+            color: #b01515;
+            font-size: 14px;
+            letter-spacing: 5px;
+            text-align: center;
+            margin-bottom: 25px;
+        }
+
+        h1 {
+            color: #b01515;
+            font-size: clamp(27px, 5vw, 42px);
+            font-weight: normal;
+            text-align: center;
+            letter-spacing: 4px;
+            line-height: 1.6;
+            margin: 0 0 30px;
+        }
+
+        .divider {
+            width: 80px;
+            height: 1px;
+            background: #b01515;
+            margin: 0 auto 35px;
+        }
+
+        .summary {
+            color: #b01515;
+            font-size: 15px;
+            line-height: 2;
+            text-align: center;
+            letter-spacing: 1px;
+            margin-bottom: 65px;
+        }
+
+        .summary span {
+            color: #b01515;
+        }
+
+        .story {
+            color: #b01515;
+            font-size: 17px;
+            line-height: 2.5;
+            letter-spacing: 1.5px;
+            text-align: justify;
+        }
+
+        .story p {
+            margin: 0 0 32px;
+            text-indent: 2em;
+        }
+
+        .story .fire {
+            color: #b01515;
+        }
+
+        .story .ending {
+            color: #b01515;
+            margin-top: 55px;
+            text-align: center;
+            text-indent: 0;
+            letter-spacing: 3px;
+        }
+
+        .footer {
+            margin-top: 100px;
+            color: #593131;
+            font-size: 12px;
+            letter-spacing: 5px;
+            text-align: center;
+        }
+
+        @media (max-width: 600px) {
+            .container {
+                padding-top: 65px;
+            }
+
+            .story {
+                font-size: 15px;
+                line-height: 2.3;
+            }
+
+            .cages {
+                grid-template-columns: repeat(3, 1fr);
+                gap: 25px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="cages">
+        <div class="cage"></div>
+        <div class="cage"></div>
+        <div class="cage"></div>
+        <div class="cage"></div>
+        <div class="cage"></div>
+    </div>
+
+    <main class="container">
+
+        <div class="chapter">
+            𝕮𝖍𝖆𝖕𝖙𝖊𝖗 𝟏
+        </div>
+
+        <h1>失去家園的烏鴉</h1>
+
+        <div class="divider"></div>
+
+        <div class="summary">
+            Summary
+            <br>
+            <span>帶來災厄與火焰的烏鴉啊，你該飛往何處？</span>
+        </div>
+
+        <article class="story">
+
+            <p>
+                依坦記得，格尼莫丘斯的冬天總是很冷，
+                可人們會圍在一起，溫暖著整個村子。
+            </p>
+
+            <p>
+                <span class="fire">紅色的火光從窗戶透過去，大火燃燒著格尼莫丘斯——他的家鄉。</span>
+            </p>
+
+            <p>
+                人們像隻老鼠一樣驚恐的逃竄，
+                紅色、一點一點地，
+                <span class="fire">吞掉了格尼莫丘斯，</span>
+                就這樣，看著自己的家園燃燒殆盡，
+                白雪蓋在了燒紅的焦土上。
+            </p>
+
+            <p class="ending">
+                不要回頭，有人這樣告訴他。
+                <br><br>
+                於是他逃啊，逃啊，拼命地逃離那片火焰，
+                卻怎麼樣也飛不起來。
+                <br><br>
+                最終，淪落成為了籠中鳥，
+                <br>
+                折斷翅膀、磨平爪子。
+            </p>
+
+        </article>
+
+    </main>
+
+</body>
+</html>
